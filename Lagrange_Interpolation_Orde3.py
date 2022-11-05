@@ -12,7 +12,7 @@ f_x3 = float(input("Masukkan nilai f(x3): "))
 x_input = float(input("Masukkan titik yang ingin diinterpolasi: "))
 
 def lagrange_orde3(x):
-    f_x = (((x-x1)*(x-x2)*(x-x3))/((x0-x1)*(x0-x2)*(x0-x3))*f_x0)+((((x-x1)*(x-x2)*(x-x3))/((x1-x0)*(x1-x2)*(x1-x3)))*f_x1)+((((x-x1)*(x-x2)*(x-x3))/((x2-x0)*(x2-x1)*(x2-x3)))*f_x2)+(((x-x1)*(x-x2)*(x-x3))/((x3-x0)*(x3-x1)*(x3-x2))*f_x3)
+    f_x = (((x-x1)*(x-x2)*(x-x3))/((x0-x1)*(x0-x2)*(x0-x3))*f_x0)+((((x-x0)*(x-x2)*(x-x3))/((x1-x0)*(x1-x2)*(x1-x3)))*f_x1)+((((x-x0)*(x-x1)*(x-x3))/((x2-x0)*(x2-x1)*(x2-x3)))*f_x2)+(((x-x0)*(x-x1)*(x-x2))/((x3-x0)*(x3-x1)*(x3-x2))*f_x3)
     return f_x
 
 x = np.arange(x0, x3, 0.05)
